@@ -27,7 +27,8 @@ export default {
   },
   methods: {
     add() {
-      this.list.push(this.listItem);
+	  this.list.push(this.listItem);
+	  this.listItem = '';
     }
   }
 };
