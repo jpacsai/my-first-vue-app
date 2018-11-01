@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Counter msg="My First Vue Counter"/>
-    <List msg="My First Vue List"/>
+    <Counter msg="Counter"/>
+    <List msg="List"/>
   </div>
 </template>
 
