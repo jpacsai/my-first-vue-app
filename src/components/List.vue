@@ -5,7 +5,11 @@
         <input type="text" v-model='listItem'>
         <button type='submit'>Add</button>
     </form>
-    <ul id='list'></ul>
+    <ul id='list'>
+		<li v-for="l in list">
+    		{{ l }}
+  		</li>
+	</ul>
   </div>
 </template>
 
@@ -53,4 +57,15 @@ button {
   background-color: darkorchid;
   color: white;
 }
+
+ul {
+	width: 50%;
+	margin-left: 40px;
+}
+
+li {
+	text-align: left;
+	margin: 5px auto;
+}
+
 </style>
