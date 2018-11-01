@@ -33,7 +33,7 @@ export default {
 .block {
   width: 400px;
   padding: 15px;
-  background-color: antiquewhite;
+  background-color: lavender;
   margin: 15px;
 }
 

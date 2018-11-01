@@ -11,37 +11,36 @@
 
 <script>
 export default {
-  name: 'List',
+  name: "List",
   props: {
     msg: String
   },
-  data () {
+  data() {
     return {
-      listItem: '',
+      listItem: "",
       list: []
-    }
+    };
   },
   methods: {
-    add () {
-        this.list.push(this.listItem);
+    add() {
+      this.list.push(this.listItem);
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .list-container {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
 }
 
 input {
-    padding: 15px;
-    box-sizing: border-box;
-    height: 40px;
+  padding: 15px;
+  box-sizing: border-box;
+  height: 40px;
 }
 
 button {
@@ -51,7 +50,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aquamarine;
+  background-color: darkorchid;
+  color: white;
 }
-
 </style>

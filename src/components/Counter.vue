@@ -58,10 +58,11 @@ input, button, submit {
 }
 
 .display {
-  background-color: lightgray;
+  background-color: white;
 }
 
 button {
-  background-color: aquamarine;
+  background-color: darkorchid;
+  color: white;
 }
 </style>
