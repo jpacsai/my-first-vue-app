@@ -85,18 +85,4 @@ export default {
 		flex-direction: column;
 		align-items: center;
 	}
-
-	li {
-		text-align: left;
-		display: grid;
-		grid-template-columns: 30px 170px 80px;
-		margin: 5px auto;
-		justify-content: center;
-	}
-
-	p, span {
-		display: flex;
-		align-items: center;
-		overflow: auto;
-	}
 </style>
