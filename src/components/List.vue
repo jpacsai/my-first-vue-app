@@ -7,7 +7,8 @@
 	</form>
 	<ul id='list'>
 		<li v-for="l in list" :key="l.id">
-			<span>{{ l.text }}</span>
+			<span>•</span>
+			<p>{{ l.text }}</p>
 			<button>Delete</button>
 		</li>
 	</ul>
@@ -79,12 +80,12 @@ export default {
 	li {
 		text-align: left;
 		display: grid;
-		grid-template: 100% / 200px 80px;
+		grid-template-columns: 30px 170px 80px;
 		margin: 5px auto;
 		justify-content: center;
 	}
 
-	span {
+	p, span {
 		display: flex;
 		align-items: center;
 		overflow: auto;
