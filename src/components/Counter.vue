@@ -50,14 +50,13 @@ input, button, submit {
 
 .display, button {
   width: 40px;
-  height: 40px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .display {
   background-color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

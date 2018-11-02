@@ -2,18 +2,21 @@
   <div id="app">
     <Counter msg="Counter"/>
     <List msg="ToDo List"/>
+		<Quotes msg="Random Jokes API" />
   </div>
 </template>
 
 <script>
 import Counter from "./components/Counter.vue";
 import List from "./components/List";
+import Quotes from "./components/Quotes";
 
 export default {
   name: "app",
   components: {
     Counter,
-    List
+		List,
+		Quotes
   }
 };
 </script>
@@ -48,7 +51,12 @@ export default {
 	button {
 		background-color: #c769f6;
 		color: white;
-		cursor: pointer
+		cursor: pointer;
+		height: 40px;
+		margin: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	button:hover {
@@ -60,7 +68,7 @@ export default {
 	}
 
 	::-webkit-scrollbar {
-    	height: 8px;
+    height: 8px;
 		width: 8px;
 	}
 

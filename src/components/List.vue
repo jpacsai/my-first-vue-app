@@ -23,7 +23,7 @@ export default {
 	name: "List",
 	components: {
 		ListItem
-  	},
+	},
 	props: {
 		msg: String
 	},
@@ -69,13 +69,7 @@ export default {
 	}
 
 	button {
-		height: 40px;
 		width: 60px;
-		margin-left: 10px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: white;
 	}
 
 	ul {
