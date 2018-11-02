@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Counter msg="Counter"/>
-    <List msg="List"/>
+    <List msg="ToDo List"/>
   </div>
 </template>
 
