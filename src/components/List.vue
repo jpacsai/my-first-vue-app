@@ -6,8 +6,8 @@
 		<button type='submit'>Add</button>
 	</form>
 	<ul id='list'>
-		<li v-for="l in list">
-			{{ l }}
+		<li v-for="l in list" :key="l.id">
+			{{ l.text }}
 		</li>
 	</ul>
 </div>
@@ -21,14 +21,20 @@ props: {
 },
 data() {
 	return {
-	listItem: "",
-	list: []
+		listItem: "",
+		list: [],
+		id: 0
 	};
 },
 methods: {
 	add() {
-	this.list.push(this.listItem);
-	this.listItem = "";
+		const listObj = {
+			text: this.listItem,
+			id: this.id
+		}
+		this.list.push(listObj);
+		this.listItem = "";
+		this.id++;
 	}
 }
 };
