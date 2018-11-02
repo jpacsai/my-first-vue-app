@@ -44,4 +44,13 @@ h3 {
 input, button, submit {
   border: none;
 } 
+
+button {
+  background-color: darkorchid;
+  color: white;
+}
+
+button:active {
+  background-color: rgb(72, 15, 100);
+}
 </style>

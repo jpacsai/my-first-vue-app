@@ -60,9 +60,4 @@ input, button, submit {
 .display {
   background-color: white;
 }
-
-button {
-  background-color: darkorchid;
-  color: white;
-}
 </style>
