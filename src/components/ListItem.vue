@@ -1,7 +1,7 @@
 <template>
-	<li>
+	<li @click='complete'>
         <span>•</span>
-        <p>{{ text }}</p>
+        <p :class="{ crossed: isActive }">{{ text }}</p>
         <button @click='remove(ListItem)'>Delete</button>
 	</li>
 </template>
@@ -12,12 +12,15 @@ export default {
 	props: ['ListItem', 'text'],
 	data() {
 		return {
-			isActive: true
+			isActive: false
 		};
 	},
 	methods: {
 		remove(l) {
 			this.$emit('remove', l);
+		},
+		complete() {
+			this.isActive = !this.isActive;
 		}
 	}
 };
@@ -32,7 +35,6 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: darkorchid;
 		color: white;
 	}
 
@@ -48,5 +50,14 @@ export default {
 		display: flex;
 		align-items: center;
 		overflow: auto;
+	}
+
+	p {
+		cursor: pointer;
+	}
+
+	.crossed {
+		text-decoration: line-through;
+		color: grey;
 	}
 </style>

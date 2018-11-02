@@ -46,8 +46,13 @@ export default {
 	}
 
 	button {
-		background-color: darkorchid;
+		background-color: #c769f6;
 		color: white;
+		cursor: pointer
+	}
+
+	button:hover {
+		background-color: darkorchid;
 	}
 
 	button:active {

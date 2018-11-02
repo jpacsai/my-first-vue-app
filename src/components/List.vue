@@ -2,11 +2,16 @@
 <div class="block">
 	<h1>{{ msg }}</h1>
 	<form id="listInput" class="list-container" @submit.prevent="add">
-		<input type="text" v-model='listItem'>
+		<input type="text" v-model='listItem' required>
 		<button type='submit'>Add</button>
 	</form>
 	<ul id='list'>
-		<ListItem v-for="ListItem in list" :key="ListItem.id" v-bind:id="ListItem.id" v-bind:text="ListItem.text" v-bind:ListItem="ListItem" v-on:remove="remove" />
+		<ListItem 
+			v-for="ListItem in list" v-bind:key="ListItem.id"
+			v-bind:id="ListItem.id"
+			v-bind:text="ListItem.text"
+			v-bind:ListItem="ListItem"
+			v-on:remove="remove" />
 	</ul>
 </div>
 </template>
@@ -70,7 +75,6 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: darkorchid;
 		color: white;
 	}
 
