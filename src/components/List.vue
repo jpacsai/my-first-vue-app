@@ -6,7 +6,7 @@
 		<button type='submit'>Add</button>
 	</form>
 	<ul id='list'>
-		<ListItem v-for="l in list" :key="l.id" v-bind:id="l.id" v-bind:text="l.text"/>
+		<ListItem v-for="ListItem in list" :key="ListItem.id" v-bind:id="ListItem.id" v-bind:text="ListItem.text" v-bind:ListItem="ListItem" v-on:remove="remove" />
 	</ul>
 </div>
 </template>
@@ -39,8 +39,8 @@ export default {
 			this.listItem = "";
 			this.id++;
 		},
-		remove(l) {
-			const listIndex = this.list.indexOf(l);
+		remove(ListItem) {
+			const listIndex = this.list.indexOf(ListItem);
 			this.list.splice(listIndex, 1);
 		}
 	}
