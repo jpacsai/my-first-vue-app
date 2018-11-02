@@ -6,10 +6,10 @@
 		<button type='submit'>Add</button>
 	</form>
 	<ul id='list'>
-		<li v-for="l in list" :key="l.id">
+		<li v-for="l in list" :key="l.id" v-bind:id="l.id">
 			<span>•</span>
 			<p>{{ l.text }}</p>
-			<button>Delete</button>
+			<button @click='remove(l)'>Delete</button>
 		</li>
 	</ul>
 </div>
@@ -30,13 +30,17 @@ export default {
 	},
 	methods: {
 		add() {
-		const listObj = {
-			text: this.listItem,
-			id: this.id
-		};
-		this.list.push(listObj);
-		this.listItem = "";
-		this.id++;
+			const listObj = {
+				text: this.listItem,
+				id: this.id
+			};
+			this.list.push(listObj);
+			this.listItem = "";
+			this.id++;
+		},
+		remove(l) {
+			const listIndex = this.list.indexOf(l);
+			this.list.splice(listIndex, 1);
 		}
 	}
 };
