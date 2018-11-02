@@ -57,7 +57,7 @@ export default {
 	form {
 		align-items: center;
 		display: grid;
-		grid-template: 100% / 200px 80px;
+		grid-template-columns: 200px 100px;
 		padding-bottom: 15px;
 		justify-content: center;
 	}
@@ -69,7 +69,7 @@ export default {
 	}
 
 	button {
-		width: 60px;
+		width: 80px;
 	}
 
 	ul {

@@ -54,9 +54,11 @@ export default {
 		cursor: pointer;
 		height: 40px;
 		margin: 10px;
+		padding: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		font-size: 120%;
 	}
 
 	button:hover {

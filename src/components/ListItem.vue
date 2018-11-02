@@ -30,7 +30,7 @@ export default {
 <style scoped>
 	button {
 		height: 40px;
-		width: 60px;
+		width: 80px;
 		margin-left: 10px;
 		display: flex;
 		align-items: center;
@@ -41,7 +41,7 @@ export default {
 	li {
 		text-align: left;
 		display: grid;
-		grid-template-columns: 30px 170px 80px;
+		grid-template-columns: 30px 170px 100px;
 		margin: 5px auto;
 		justify-content: center;
 	}

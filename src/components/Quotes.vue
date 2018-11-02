@@ -22,7 +22,7 @@
 		getQuote() {
 		fetch("https://api.chucknorris.io/jokes/random")
 			.then(data => data.json())
-			.then(data => (this.quote = data.value));
+			.then(data => this.quote = data.value);
 		}
 	},
 	created: function() {
@@ -45,7 +45,9 @@
 	}
 
 	p {
-		width: 200px;
+		box-sizing: border-box;
+		width: 280px;
+		line-height: 1.4;
 		background-color: white;
 		padding: 15px;
 		display: flex;
@@ -55,6 +57,6 @@
 	}
 
 	button {
-		width: 80px;
+		width: 165px;
 	}
 </style>
