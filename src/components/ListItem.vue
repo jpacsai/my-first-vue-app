@@ -1,44 +1,23 @@
 <template>
-<div class="block">
-	<h1>{{ msg }}</h1>
-	<form id="listInput" class="list-container" @submit.prevent="add">
-		<input type="text" v-model='listItem'>
-		<button type='submit'>Add</button>
-	</form>
-	<ul id='list'>
-		<ListItem v-for="l in list" :key="l.id" v-bind:id="l.id" v-bind:text="l.text"/>
-	</ul>
-</div>
+	<li>
+        <span>•</span>
+        <p>{{ text }}</p>
+        <button @click='remove(l)'>Delete</button>
+	</li>
 </template>
 
 <script>
-import ListItem from "./ListItem";
-
 export default {
-	name: "List",
-	components: {
-		ListItem
-  	},
+	name: "ListItem",
 	props: {
-		msg: String
+		text: String
 	},
 	data() {
 		return {
-		listItem: "",
-		list: [],
-		id: 0
+			isActive: true
 		};
 	},
 	methods: {
-		add() {
-			const listObj = {
-				text: this.listItem,
-				id: this.id
-			};
-			this.list.push(listObj);
-			this.listItem = "";
-			this.id++;
-		},
 		remove(l) {
 			const listIndex = this.list.indexOf(l);
 			this.list.splice(listIndex, 1);
